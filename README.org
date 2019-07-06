@@ -6,5 +6,5 @@
 pdflatex -shell-escape fake-diary.tex
 #+END_SRC
 * Pre-generated files and source
-  See [[file:fake-diary.pdf][fake-diary.pdf]] for the PDF
-  See [[file:fake-diary.tex][fake-diary.tex]] for the LaTeX source
+  - See [[file:fake-diary.pdf][fake-diary.pdf]] for the PDF
+  - See [[file:fake-diary.tex][fake-diary.tex]] for the LaTeX source

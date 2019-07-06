@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+c1}{;; This is equivalent to the one above because Scheme is a Lisp\PYGZhy{}1}
+    \PYG{c+c1}{;; So a variable containing a lambda is equivalent to a function}
+    \PYG{p}{(}\PYG{k}{define }\PYG{n+nv}{hello} \PYG{p}{(}\PYG{k}{lambda }\PYG{n+nv}{name}
+                    \PYG{p}{(}\PYG{n+nb}{display }\PYG{l+s}{\PYGZdq{}Hello, \PYGZdq{}}\PYG{p}{)}
+                    \PYG{p}{(}\PYG{n+nb}{display }\PYG{n+nv}{name}\PYG{p}{)}
+                    \PYG{p}{(}\PYG{n+nb}{display }\PYG{l+s}{\PYGZdq{}!\PYGZdq{}}\PYG{p}{)}
+                    \PYG{p}{(}\PYG{n+nf}{newline}\PYG{p}{)))}
+\end{Verbatim}

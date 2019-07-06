@@ -1,0 +1,93 @@
+\documentclass[UTF8]{tufte-book}
+
+% Unicode support
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{minted}
+\usepackage{gensymb}
+\usepackage{hyperref}
+\usepackage[
+    type={CC},
+    modifier={by-sa},
+    version={4.0},
+]{doclicense}
+
+\newcommand{\warning}[1]{\textbf{\textit{WARNING: #1}}}
+\newcommand{\called}[1]{called \textit{#1}}
+\newcommand{\wts}{WTS\texttrademark}
+\newcommand{\WTS}{Watermelon Transport System\texttrademark}
+\newcommand{\sts}{STS\texttrademark}
+\newcommand{\STS}{Strawberry Transport System\texttrademark}
+
+\newenvironment{entry}[2] %% date, heading
+{\noindent\textbf{#2}\marginnote{#1}\\}{\vspace{0.5cm}}
+
+\usepackage{makeidx} % Index
+\makeindex
+
+\title{A fake diary}
+\author{Ron}
+\date{2019-07-06}
+
+\begin{document}
+\frontmatter
+\maketitle
+\doclicenseThis
+\newpage
+\warning{THIS IS A FAKE DIARY}
+
+Welcome to this fake diary, written in \LaTeX{} (\textbf{not} pronounced like the rubber)
+
+\begin{entry}{2020-07-06}{Ahhaa}
+  Hello, I like \LaTeX, and today I went to the science museum in Tartu (\called{``Ahhaa''}).
+  \textit{Ahhaa} has a \textbf{enormous} chair and table, on which one can sit, and pretend to drink from a \textbf{enormous} mug.
+  I sat on the chair, and a giant came, and nearly sat on the chair I was sitting on,
+  but I notified it (him/her) that I was sitting there,
+  by shouting ``Mi sidas \^ci tie'' \footnote{Giants speak Esperanto (it is the international language)}\newline
+\end{entry}
+\begin{entry}{2020-07-07}{Scheme}
+  I like Scheme
+  
+  ``Hello, world!'' in Scheme:
+  \begin{minted}{scheme}
+    ;; Should work in most Schemes
+    (display "Hello, world!")
+    (newline)
+  \end{minted}
+  Scheme is a functional programming language (although it is not a pure functional programming language), and a dialect of lisp.
+  Scheme implementations require Tail Call Optimization (TCO), so that tail calls do not cause stack overflows, and has no loops.
+  It is a Lisp-1, which means that functions and variable use the same namespace\newline
+  A function that takes 1 parameter, called name, and says hello to it:
+  \begin{minted}{scheme}
+    (define (hello name)
+      (display "Hello, ")
+      (display name)
+      (display "!")
+      (newline))
+  \end{minted}
+  or
+  \begin{minted}{scheme}
+    ;; This is equivalent to the one above because Scheme is a Lisp-1
+    ;; So a variable containing a lambda is equivalent to a function
+    (define hello (lambda name
+                    (display "Hello, ")
+                    (display name)
+                    (display "!")
+                    (newline)))
+  \end{minted}
+\end{entry}
+\begin{entry}{2020-07-08}{Watermelon}
+  At 10:25:31 it was 28.5322313342\celsius\newline
+  I went into the basement, where there was a lake, which I went round.
+  Past the lake there was a store of watermelons (in case of a hard brexit, and for other purposes),
+  so I sent a watermelon through the \WTS{} (\wts) to the main house, and went back.
+  I then received the watermelon from the \WTS, and ate it, which I enjoyed \textit{very} much.\newline
+\end{entry}
+\begin{entry}{2020-07-09}{Strawberries}
+  I had grown so many strawberries, that I had an overflow of strawberries, so I sold some of them today,
+  and made a profit of \texteuro{}10000 \footnote{Because the giant bought a lot of them}.
+  The strawberry store is past the watermelon store, and uses the \STS{} (\sts),
+  which is designed for strawberries, instead of the \WTS.\newline
+\end{entry}
+\end{document}

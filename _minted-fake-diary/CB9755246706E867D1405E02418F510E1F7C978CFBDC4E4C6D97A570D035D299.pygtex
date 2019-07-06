@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+c1}{;; Should work in most Schemes}
+    \PYG{p}{(}\PYG{n+nb}{display }\PYG{l+s}{\PYGZdq{}Hello, world!\PYGZdq{}}\PYG{p}{)}
+    \PYG{p}{(}\PYG{n+nf}{newline}\PYG{p}{)}
+\end{Verbatim}

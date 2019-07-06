@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{p}{(}\PYG{k}{define }\PYG{p}{(}\PYG{n+nf}{hello} \PYG{n+nv}{name}\PYG{p}{)}
+      \PYG{p}{(}\PYG{n+nb}{display }\PYG{l+s}{\PYGZdq{}Hello, \PYGZdq{}}\PYG{p}{)}
+      \PYG{p}{(}\PYG{n+nb}{display }\PYG{n+nv}{name}\PYG{p}{)}
+      \PYG{p}{(}\PYG{n+nb}{display }\PYG{l+s}{\PYGZdq{}!\PYGZdq{}}\PYG{p}{)}
+      \PYG{p}{(}\PYG{n+nf}{newline}\PYG{p}{))}
+\end{Verbatim}

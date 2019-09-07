@@ -7,11 +7,14 @@
 \usepackage{minted}
 \usepackage{gensymb}
 \usepackage{hyperref}
+\usepackage{haskelllogo}
 \usepackage[
   type={CC},
   modifier={by-sa},
   version={4.0},
 ]{doclicense}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 \newcommand{\warning}[1]{\textbf{\textit{WARNING: #1}}}
 \newcommand{\called}[1]{called \textit{#1}}
@@ -50,7 +53,7 @@ Welcome to this fake diary, written in \LaTeX{} (\textbf{not} pronounced like th
   I like Scheme
   
   ``Hello, world!'' in Scheme:
-  \begin{minted}{scheme}
+  \begin{minted}[breaklines]{scheme}
     ;; Should work in most Schemes
     (display "Hello, world!")
     (newline)
@@ -59,7 +62,7 @@ Welcome to this fake diary, written in \LaTeX{} (\textbf{not} pronounced like th
   Scheme implementations require Tail Call Optimization (TCO), so that tail calls do not cause stack overflows, and has no loops.
   It is a Lisp-1, which means that functions and variable use the same namespace\newline
   A function that takes 1 parameter, called name, and says hello to it:
-  \begin{minted}{scheme}
+  \begin{minted}[breaklines]{scheme}
     (define (hello name)
       (display "Hello, ")
       (display name)
@@ -67,7 +70,7 @@ Welcome to this fake diary, written in \LaTeX{} (\textbf{not} pronounced like th
       (newline))
   \end{minted}
   or
-  \begin{minted}{scheme}
+  \begin{minted}[breaklines]{scheme}
     ;; This is equivalent to the one above because Scheme is a Lisp-1
     ;; So a variable containing a lambda is equivalent to a function
     (define hello (lambda name
@@ -108,5 +111,47 @@ Welcome to this fake diary, written in \LaTeX{} (\textbf{not} pronounced like th
   A dat is the opposite of a cog, with the bad bits of cats \& dogs, but not the good bits.
   Inverse dats are the same as cogs but cheaper\footnote{Cog: \texteuro{}100, Inverse dat: \texteuro{}50}.
   You can even modify them after you have bought them, like changing the colour.\newline
+\end{entry}
+\begin{entry}{2020-07-12}{The Haskell Cave}
+  I went into the Haskell Cave with my Thorfire VG-15S
+
+  \includegraphics{PathToTheCave}
+
+  There is a Haskell logo \haskelllogo[scale=.125] in the cave:
+
+  \haskelllogo
+
+  And also:
+  \begin{minted}[breaklines]{haskell}
+    module Main (main) where
+    main :: IO ()
+    main = putStr $ unlines [ "Welcome to the Haskell Cave!"
+                            , "There are cave paintings with Haskell here"
+                            , "There is a monad machine here, to put you into a monad (like from a Person to an IO Person)"]
+  \end{minted}
+  And a factorial program:
+  \begin{minted}[breaklines]{haskell}
+    module Factorial (factorial) where
+    import Numeric.Natural
+    factorial :: Natural -> Natural
+    factorial 0 = 1
+    factorial n = n * factorial (n - 1)
+  \end{minted}
+  And a command line interface for it:
+  \begin{minted}[breaklines]{haskell}
+    module Main (main) where
+    import Numeric.Natural
+    import System.Environment
+    import Factorial
+    main :: IO ()
+    main = getArgs >>= command
+    command :: [String] -> IO ()
+    command [] = do
+      name <- getProgName
+      putStrLn $ name ++ number
+    command [number] =
+      let n = read number :: Natural in
+        print $ factorial n
+  \end{minted}
 \end{entry}
 \end{document}

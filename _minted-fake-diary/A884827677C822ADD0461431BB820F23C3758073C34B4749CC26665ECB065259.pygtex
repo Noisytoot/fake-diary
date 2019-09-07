@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k+kr}{module} \PYG{n+nn}{Factorial} \PYG{p}{(}\PYG{n+nf}{factorial}\PYG{p}{)} \PYG{k+kr}{where}
+    \PYG{k+kr}{import} \PYG{n+nn}{Numeric.Natural}
+    \PYG{n}{factorial} \PYG{o+ow}{::} \PYG{k+kt}{Natural} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{Natural}
+    \PYG{n}{factorial} \PYG{l+m+mi}{0} \PYG{o+ow}{=} \PYG{l+m+mi}{1}
+    \PYG{n}{factorial} \PYG{n}{n} \PYG{o+ow}{=} \PYG{n}{n} \PYG{o}{*} \PYG{n}{factorial} \PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k+kr}{module} \PYG{n+nn}{Main} \PYG{p}{(}\PYG{n+nf}{main}\PYG{p}{)} \PYG{k+kr}{where}
+    \PYG{k+kr}{import} \PYG{n+nn}{Numeric.Natural}
+    \PYG{k+kr}{import} \PYG{n+nn}{System.Environment}
+    \PYG{k+kr}{import} \PYG{n+nn}{Factorial}
+    \PYG{n}{main} \PYG{o+ow}{::} \PYG{k+kt}{IO} \PYG{n+nb}{()}
+    \PYG{n}{main} \PYG{o+ow}{=} \PYG{n}{getArgs} \PYG{o}{\PYGZgt{}\PYGZgt{}=} \PYG{n}{command}
+    \PYG{n}{command} \PYG{o+ow}{::} \PYG{p}{[}\PYG{k+kt}{String}\PYG{p}{]} \PYG{o+ow}{\PYGZhy{}\PYGZgt{}} \PYG{k+kt}{IO} \PYG{n+nb}{()}
+    \PYG{n}{command} \PYG{k+kt}{[]} \PYG{o+ow}{=} \PYG{k+kr}{do}
+      \PYG{n}{name} \PYG{o+ow}{\PYGZlt{}\PYGZhy{}} \PYG{n}{getProgName}
+      \PYG{n}{putStrLn} \PYG{o}{\PYGZdl{}} \PYG{n}{name} \PYG{o}{++} \PYG{n}{number}
+    \PYG{n}{command} \PYG{p}{[}\PYG{n}{number}\PYG{p}{]} \PYG{o+ow}{=}
+      \PYG{k+kr}{let} \PYG{n}{n} \PYG{o+ow}{=} \PYG{n}{read} \PYG{n}{number} \PYG{o+ow}{::} \PYG{k+kt}{Natural} \PYG{k+kr}{in}
+        \PYG{n}{print} \PYG{o}{\PYGZdl{}} \PYG{n}{factorial} \PYG{n}{n}
+\end{Verbatim}

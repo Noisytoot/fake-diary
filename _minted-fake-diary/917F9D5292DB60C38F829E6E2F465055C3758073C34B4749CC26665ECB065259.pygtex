@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k+kr}{module} \PYG{n+nn}{Main} \PYG{p}{(}\PYG{n+nf}{main}\PYG{p}{)} \PYG{k+kr}{where}
+    \PYG{n}{main} \PYG{o+ow}{::} \PYG{k+kt}{IO} \PYG{n+nb}{()}
+    \PYG{n}{main} \PYG{o+ow}{=} \PYG{n}{putStr} \PYG{o}{\PYGZdl{}} \PYG{n}{unlines} \PYG{p}{[} \PYG{l+s}{\PYGZdq{}Welcome to the Haskell Cave!\PYGZdq{}}
+                            \PYG{p}{,} \PYG{l+s}{\PYGZdq{}There are cave paintings with Haskell here\PYGZdq{}}
+                            \PYG{p}{,} \PYG{l+s}{\PYGZdq{}There is a monad machine here, to put you into a monad (like from a Person to an IO Person)\PYGZdq{}}\PYG{p}{]}
+\end{Verbatim}
